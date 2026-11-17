@@ -1,0 +1,16 @@
+{
+  "name": "Obras BMS",
+  "short_name": "Obras BMS",
+  "description": "Fichas de obra, visitas, checklists y equipos para integración BMS",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f3d3e",
+  "theme_color": "#0f3d3e",
+  "lang": "es",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
