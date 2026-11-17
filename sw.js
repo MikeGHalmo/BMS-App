@@ -1,5 +1,5 @@
 // Sube CACHE de versión cada vez que publiques cambios para que el móvil se actualice.
-const CACHE = 'obras-bms-v2';
+const CACHE = 'obras-bms-v3';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
   'icon.svg', 'icon-192.png', 'icon-512.png'];
 
