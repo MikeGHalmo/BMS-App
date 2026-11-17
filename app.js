@@ -478,6 +478,16 @@ $('#menuBtn').onclick = () => {
 };
 
 /* ---------- arranque ---------- */
-if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+if ('serviceWorker' in navigator) {
+  const hadController = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).then(reg => {
+    // Al volver a la app, comprobar si hay versión nueva en GitHub
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) reg.update(); });
+  }).catch(() => {});
+  let reloaded = false;
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (hadController && !reloaded) { reloaded = true; location.reload(); }
+  });
+}
 if (navigator.storage && navigator.storage.persist) navigator.storage.persist();
 route();
