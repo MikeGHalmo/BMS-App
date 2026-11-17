@@ -1,7 +1,7 @@
 // Sube CACHE de versión cada vez que publiques cambios para que el móvil se actualice.
-const CACHE = 'obras-bms-v1';
+const CACHE = 'obras-bms-v2';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
-  'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png'];
+  'icon.svg', 'icon-192.png', 'icon-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(FILES)).then(() => self.skipWaiting()));
